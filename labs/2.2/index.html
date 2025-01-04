@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                display: flex;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+            }
+
+            button {
+                padding: 0.5rem;
+                background-color: antiquewhite;
+                border: 1px solid orange;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+
+            iframe {
+                width: 1920px;
+                height: 1080px;
+                border: none;
+            }
+        </style>
+        <script src="../../script.js"></script>
+    </head>
+    <body>
+        <nav>
+            <button onclick="loadDocument('./pages/1.html')">Тема, Мета</button>
+            <button onclick="loadDocument('./pages/2.html')">Десктопна VS Планшетна VS Мобільна верстки</button>
+        </nav>
+        <iframe id="frame"></iframe>
+    </body>
+</html>
