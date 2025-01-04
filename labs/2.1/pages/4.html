@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fluid Table Layout</title>
+        <style>
+            * {
+                border: 1px solid black;
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                border: none;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            table {
+                border-collapse: separate;
+                border-spacing: 1rem 0;
+                width: 90%;
+                height: 90vh;
+                margin: 2vh auto;
+                min-width: 320px;
+                max-width: 1200px;
+                margin-left: calc(auto - 1rem);
+            }
+            td {
+                padding: 1%;
+                text-align: center;
+            }
+            .cell-1 {
+                background-color: blue;
+                color: white;
+                height: 15%;
+            }
+            .cell-2 {
+                background-color: yellow;
+                width: 25%;
+                position: relative;
+                left: -1rem;
+            }
+            .cell-3 {
+                background-color: blue;
+                color: white;
+                height: 15%;
+            }
+            .cell-4 {
+                height: 70%;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="cell-2" rowspan="3">2</td>
+                <td class="cell-1">1</td>
+            </tr>
+            <tr>
+                <td class="cell-4">4</td>
+            </tr>
+            <tr>
+                <td class="cell-3">3</td>
+            </tr>
+        </table>
+    </body>
+</html>

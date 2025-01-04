@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fixed Table Layout</title>
+        <style>
+            * {
+                border: 1px solid black;
+            }
+            html,
+            body {
+                border: none;
+            }
+            table {
+                width: 500px;
+                height: 500px;
+                padding-left: 1rem;
+                border-collapse: separate;
+                border-spacing: 1rem 0;
+                margin-left: -1rem;
+            }
+            td {
+                padding: 10px;
+                text-align: center;
+            }
+            .cell-1 {
+                background-color: blue;
+                color: white;
+                height: 75px;
+            }
+            .cell-2 {
+                background-color: yellow;
+                width: 125px;
+                left: -1rem;
+            }
+            .cell-3 {
+                background-color: blue;
+                color: white;
+                height: 75px;
+            }
+            .cell-4 {
+                height: 350px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="cell-2" rowspan="3">2</td>
+                <td class="cell-1">1</td>
+            </tr>
+            <tr>
+                <td class="cell-4">4</td>
+            </tr>
+            <tr>
+                <td class="cell-3">3</td>
+            </tr>
+        </table>
+    </body>
+</html>

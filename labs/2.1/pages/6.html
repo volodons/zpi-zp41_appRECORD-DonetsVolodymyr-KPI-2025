@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fluid Block Layout</title>
+        <style>
+            * {
+                border: 1px solid black;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html,
+            body {
+                border: none;
+                height: 100%;
+            }
+
+            .container {
+                display: flex;
+                width: 90%;
+                height: 90vh;
+                margin: 2% auto;
+                min-width: 320px;
+                max-width: 1200px;
+            }
+
+            .cell-2 {
+                width: 25%;
+                background-color: yellow;
+            }
+
+            .right-column {
+                width: calc(75% - 2rem);
+                display: flex;
+                flex-direction: column;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            .cell-1 {
+                height: 15%;
+                background-color: blue;
+                color: white;
+            }
+
+            .cell-4 {
+                height: 70%;
+            }
+
+            .cell-3 {
+                height: 15%;
+                background-color: blue;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="cell-2">2</div>
+            <div class="right-column">
+                <div class="cell-1">1</div>
+                <div class="cell-4">4</div>
+                <div class="cell-3">3</div>
+            </div>
+        </div>
+    </body>
+</html>
