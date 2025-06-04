@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Promise Generator</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css" />
+        <style>
+            body {
+                font-family: sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+            }
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+            }
+            .form label {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                font-weight: bold;
+            }
+            .form input[type='number'],
+            .form button[type='submit'] {
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            }
+            .form fieldset {
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 10px;
+            }
+            .form legend {
+                font-weight: bold;
+                padding: 0 5px;
+            }
+            .form fieldset label {
+                font-weight: normal;
+                flex-direction: row;
+                align-items: center;
+            }
+            .form input[type='radio'] {
+                margin-right: 8px;
+            }
+            .form button[type='submit'] {
+                background-color: #4caf50;
+                color: white;
+                cursor: pointer;
+                border: none;
+            }
+            .form button[type='submit']:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="form">
+            <label>
+                Delay (ms)
+                <input type="number" name="delay" required />
+            </label>
+
+            <fieldset>
+                <legend>State</legend>
+                <label>
+                    <input type="radio" name="state" value="fulfilled" required />
+                    Fulfilled
+                </label>
+                <label>
+                    <input type="radio" name="state" value="rejected" required />
+                    Rejected
+                </label>
+            </fieldset>
+
+            <button type="submit">Create notification</button>
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+        <script src="./js/snackbar.js"></script>
+    </body>
+</html>
