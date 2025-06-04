@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Пошук зображень</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.css"
+            integrity="sha512-FaAQujRxLMvw+H9xS9dHRVNUz6jP8J419r0M8nL0M53GAk5c328T2xLPMVlY0N12HkHkS5M_aM22lYQ7jK/wQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <form class="search-form" id="search-form">
+                <input
+                    type="text"
+                    name="searchQuery"
+                    autocomplete="off"
+                    placeholder="Пошук зображень..."
+                    class="search-input"
+                />
+                <button type="submit" class="search-button">Пошук</button>
+            </form>
+        </header>
+
+        <main>
+            <div class="loader-container">
+                <span class="loader" id="loader" style="display: none"></span>
+            </div>
+            <div class="gallery" id="gallery"></div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.2/simple-lightbox.min.js"
+            integrity="sha512-E9/G3h7h77vG4z7L1brKBB2eJ6jM9yHh+ZgAewIMJ1D1M/L2fUjP3gMreEaJ+L8H/r+VpQcM1GzX_X47PqL4fQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="./js/search.js"></script>
+    </body>
+</html>
